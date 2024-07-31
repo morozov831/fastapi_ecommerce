@@ -1,3 +1,4 @@
+import os
 from typing import Annotated
 
 from fastapi import APIRouter, Depends, status, HTTPException
@@ -8,6 +9,9 @@ from sqlalchemy import insert, select
 from app.backend.db_depends import get_db
 from app.schemas import CreateUser
 from app.models import User
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # security = HTTPBasic()
 
@@ -15,9 +19,9 @@ router = APIRouter(prefix='/auth', tags=['auth'])
 bcrypt_context = CryptContext(schemes=['bcrypt'], deprecated='auto')
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl='auth/token')
 
-SECRET_KEY = '29bf8144000cb0fb098ae6409784731e8a751943c4ad3748367fab18b08e5ab0'
-ALGORITHM = 'HS256'
-
+SECRET_KEY = os.getenv('SECRET_KEY')
+ALGORITHM = os.getenv('ALGORITHM')
+print(SECRET_KEY)
 #
 # async def get_current_username(db: Annotated[AsyncSession, Depends(get_db)], credentials: Annotated[HTTPBasicCredentials, Depends(security)]):
 #     user = await db.scalar(select(User).where(User.username == credentials.username))
