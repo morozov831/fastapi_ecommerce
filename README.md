@@ -31,3 +31,40 @@
   <li><b>Отзывы (reviews)</b>: Содержит отзывы пользователей о заказанных товарах.</li>
   <li><b>Рейтинги (ratings)</b>: Содержит рейтинги пользователей заказанных товаров.</li>
 </ol>
+<h2>Структура проекта</h2>
+<pre>
+- fastapi-ecommerce [Folder]
+ - app [Folder]   
+    - backend [Folder]
+       - db.py
+       - db_depends.py
+    - migrations [Folder]
+    - models [Folder]
+       - __init__.py
+       - category.py
+       - products.py
+       - rating.py
+       - review.py
+       - user.py
+    - routers [Folder]
+       - __init__.py
+       - auth.py
+       - category.py
+       - permission.py
+       - products.py
+       - reviews.py
+    - __init__.py
+    - Dockerfile.py
+    - Dockerfile.prod
+    - log.py
+    - main.py
+    - requirements.txt
+    - schemas.py
+- nginx [Folder]
+    - Dockerfile
+    - fastapi_ecommerce.conf
+- .env.example
+- alembic.ini
+- docker-compose.prod.ynl
+-docker-compose.yml
+</pre>
