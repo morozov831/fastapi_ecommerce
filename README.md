@@ -66,5 +66,5 @@
 - .env.example
 - alembic.ini
 - docker-compose.prod.ynl
--docker-compose.yml
+- docker-compose.yml
 </pre>
