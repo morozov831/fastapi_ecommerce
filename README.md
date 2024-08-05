@@ -141,5 +141,5 @@ docker compose -f docker-compose.prod.yml build
 <h2>Обратная связь</h2>
 
 Если у вас есть какие-либо отзывы, вопросы или предложения относительно этого
-проекта, пишите мне в Telegram https://t.me/morozov_831 Буду рад помочь Вам!
+проекта, пишите мне в <a href="https://t.me/morozov_831">Telegram</a>. Буду рад помочь Вам!
 
