@@ -72,13 +72,22 @@
 - docker-compose.yml
 </pre>
 <h2>Установка и запуск</h2>
-<h3>Установка</h3>
-<ol>
-  <li>Склонируйте репозиторий проекта из GitHub:</li>
-  <p style="text-align: center;">
-  <pre><code>
-git clone https://github.com/kolenkoal/fastapi_ecommerce_api.git
-</code></pre>
-</p>
+<h3>Установка:</h3>
+
+1. Склонируйте репозиторий проекта из GitHub:
+   ```bash
+   git clone https://github.com/kolenkoal/fastapi_ecommerce_api.git
+   ```
+
+2. Перейдите в каталог проекта:
+   ```bash
+   cd fastapi_ecommerce_api
+   ```
+
+3. Переименуйте файл `.env-example` в `.env`:
+   ```bash
+   mv .env-example .env
+   ```
+
 
 </ol>
