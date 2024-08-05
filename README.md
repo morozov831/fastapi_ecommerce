@@ -76,18 +76,66 @@
 
 1. Склонируйте репозиторий проекта из GitHub:
    ```bash
-   git clone https://github.com/kolenkoal/fastapi_ecommerce_api.git
+   git clone https://github.com/morozov831/fastapi_ecommerce.git
    ```
 
 2. Перейдите в каталог проекта:
    ```bash
-   cd fastapi_ecommerce_api
+   cd fastapi_ecommerce
    ```
-
-3. Переименуйте файл `.env-example` в `.env`:
+3. Создайте и активируйте виртуальное окружение:
    ```bash
-   mv .env-example .env
+   python3 -m venv venv
+   source venv/bin/activate
    ```
 
+4. Установите необходимые пакеты:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Переименуйте файл `.env.example` в `.env`:
+   ```bash
+   mv .env.example .env
+   ```
+4. Для настройки вашего приложения откройте файл `.env` в текстовом редакторе и
+   заполните
+   соответствующие значения для каждой переменной в зависимости от вашей среды.
+   Обязательно
+   предоставьте cекретный ключ, используемый для аутентификации
+  JWT (JSON Web Token).
+   После настройки эти переменные будут
+   загружены в
+   окружение вашего приложения во время его выполнения.
+   <p>Вы можете установить свой собственный или сгенерировать случайный секретный ключ на сайте https://www.grc.com/passwords.htm</p>
+<h4>Настройки базы данных:</h4>
+  - <b>POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD:</b> Конфигурация для
+    базы данных PostgreSQL (должна совпадать с DB_NAME, DB_USER и
+    DB_PASSWORD соответственно).
+<h3>Запуск:</h3>
+1. Убедитесь, что Docker и Docker Compose установлены на вашей системе.
+docker compose -f docker-compose.prod.yml build
 
-</ol>
+2. Запустите следующую команду для сборки образов, создадия и запуска контейнеров:
+   ```bash
+   docker compose -f docker-compose.prod.yml up -d --build
+   ```
+2. После запуска контейнеров примените миграции:
+   ```bash
+   docker compose -f docker-compose.prod.yml exec web alembic upgrade head
+   ```
+
+3. Далее перейдите к документации Swagger
+   по адресу http://127.0.0.1/docs, чтобы
+   взаимодействовать с
+   API.
+
+Для остановки проекта:
+
+1. Нажмите `Ctrl + C` в терминале, чтобы остановить запущенные контейнеры
+   Docker.
+
+2. Запустите следующую команду, чтобы остановить контейнеры Docker и удалить их:
+   ```bash
+   docker compose -f docker-compose.prod.yml down -v
+   ```
+
