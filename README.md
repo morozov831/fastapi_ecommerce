@@ -26,7 +26,7 @@
 </ol>
 <h2>База данных</h2>
 <img src="https://raw.githubusercontent.com/morozov831/fastapi_ecommerce/master/image.png">
-<h3>Таблицы</h3>
+<h3>Таблицы:</h3>
 <ol>
   <li><b>Пользователи (users)</b>: Содержит информацию о пользователях системы, включая их идентификаторы, адреса электронной почты, пароли, имена, фамилии, роли и статусы активности.</li>
   <li><b>Категории (categories)</b>: Содержит информацию о категориях товаров для организации каталога.</li>
@@ -71,3 +71,14 @@
 - docker-compose.prod.ynl
 - docker-compose.yml
 </pre>
+<h2>Установка и запуск</h2>
+<h3>Установка</h3>
+<ol>
+  <li>Склонируйте репозиторий проекта из GitHub:</li>
+  <p style="text-align: center;">
+  <pre><code>
+git clone https://github.com/kolenkoal/fastapi_ecommerce_api.git
+</code></pre>
+</p>
+
+</ol>
