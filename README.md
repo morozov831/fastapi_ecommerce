@@ -113,7 +113,6 @@
     DB_PASSWORD соответственно).
 <h3>Запуск:</h3>
 1. Убедитесь, что Docker и Docker Compose установлены на вашей системе.
-docker compose -f docker-compose.prod.yml build
 
 2. Запустите следующую команду для сборки образов, создадия и запуска контейнеров:
    ```bash
