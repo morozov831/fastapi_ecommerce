@@ -137,6 +137,8 @@
    ```bash
    docker compose -f docker-compose.prod.yml down -v
    ```
+<h2>Лицензия</h2>
+Данный проект лицензирован по <a href="https://github.com/morozov831/fastapi_ecommerce/blob/master/MIT-LICENSE.txt">MIT license</a>.
 <h2>Обратная связь</h2>
 
 Если у вас есть какие-либо отзывы, вопросы или предложения относительно этого
